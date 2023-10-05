@@ -1,0 +1,126 @@
+body {
+    direction: rtl;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'BYekan';
+}
+
+nav {
+    background: #444;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.form label:not(:first-child){
+    margin-top: 10px;
+}
+
+.form label{
+    margin-bottom: 5px;
+}
+
+.form input{
+    font-family: 'BYekan';
+}
+
+.form input[type="button"]{
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 4px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.form input[type="button"]:hover{
+    border: 1px solid #fff;
+}
+
+.page {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 250px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 10px;
+    background: rgba(255,255,255,.1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.success {
+    color: #0f0;
+}
+
+.error {
+    color: #f00;
+}
+
+table {
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+table th {
+    text-align: right;
+}
+
+table tr th {
+    min-width: 110px;
+}
+
+table tr td:last-child {
+    text-align: center;
+}
+
+table th:last-child {
+    text-align: center;
+}
+
+.btn {
+    background: unset;
+    color: #fff;
+    padding: 0px 4px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    font-family: 'BYekan';
+    font-size: .9rem;
+    margin-left: 2px;
+}
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('./BYekan/BYekan.eot');
+    src: url('./BYekan/BYekan.eot?#iefix') format('embedded-opentype');
+    src: local('☺'), url('./BYekan/BYekan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav>
+        <div>سامانه مدیریت مشتریان مرادپور</div>
+        <div>
+            <a href="list.html">لیست کاربران</a> | 
+            <a href="create.html">ایجاد کاربر</a>    
+        </div>
+    </nav>
+    <section class="page">
+        <div class="form">
+            <label>نام</label>
+            <input type="text" id="firstname">
+            <label>نام خانوادگی</label>
+            <input type="text" id="lastname">
+            <label>تلفن همراه</label>
+            <input type="text" id="mobile" dir="ltr">
+            <input type="button" onclick="submit()" value="ایجاد کاربر">
+            <div class="result" id="result"></div>
+        </div>
+    </section>
+
+    <script>
+        async function submit(){
+            const url = 'http://127.0.0.1:8000/users'
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    "firstname": document.getElementById('firstname').value,
+                    "lastname": document.getElementById('lastname').value,
+                    "mobile": document.getElementById('mobile').value
+                }),
+            });
+
+            if(response.status === 200){
+                document.getElementById('result').innerHTML = '<span class="success">کاربر با موفقیت افزوده شد.</span>'
+            }
+            else{
+                document.getElementById('result').innerHTML = '<span class="error">خطا در ویرایش کاربر.</span>'
+            }
+        }
+    </script>
+</body>
+</html>
