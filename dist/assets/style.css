@@ -62,6 +62,18 @@ a {
     align-items: center;
 }
 
+.box{
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.box div:first-child{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+}
+
 .form {
     width: 100%;
     max-width: 250px;
@@ -84,9 +96,7 @@ a {
 }
 
 table {
-    background: rgba(0,0,0,.2);
-    border-radius: 10px;
-    padding: 1rem;
+
 }
 
 table th {
@@ -95,6 +105,7 @@ table th {
 
 table tr th {
     min-width: 110px;
+    padding: 10px;
 }
 
 table tr td:last-child {
@@ -105,15 +116,34 @@ table th:last-child {
     text-align: center;
 }
 
+table thead tr {
+    background: #344;
+}
+
+table tbody td {
+    padding: 8px;
+}
+
+table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,.1);
+}
+
 .btn {
     background: unset;
     color: #fff;
     padding: 0px 4px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #fff;
     font-family: 'BYekan';
     font-size: .9rem;
     margin-left: 2px;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 
 @font-face {

@@ -7,39 +7,49 @@
 </head>
 <body>
     <nav>
-        <div>سامانه مدیریت مشتریان مرادپور</div>
+        <div>سامانه مدیریت مشتریان تست نژاد</div>
         <div>
-            <a href="list.html">لیست کاربران</a> | 
-            <a href="create.html">ایجاد کاربر</a>    
+            <a href="index.html">لیست کاربران</a>
         </div>
     </nav>
     <section class="page">
-        <table>
-            <thead>
-                <tr>
-                    <th>شناسه</th>
-                    <th>نام</th>
-                    <th>نام خانوادگی</th>
-                    <th>تلفن همراه</th>
-                    <th>مدیریت</th>
-                </tr>
-            </thead>
-            <tbody id="users">
-
-            </tbody>
-        </table>
+        <div class="box">
+            <div>
+                <a href="create.html" class="btn">ایجاد کاربر</a>    
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>شناسه</th>
+                            <th>نام</th>
+                            <th>نام خانوادگی</th>
+                            <th>تلفن همراه</th>
+                            <th>مدیریت</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users"></tbody>
+                </table>
+            </div>
+        </div>
     </section>
 
     <script>
+        const endpoint = 'http://127.0.0.1:8000';
         async function loadUsers(){
             document.getElementById('users').innerHTML = "";
-            const url = 'http://127.0.0.1:8000/users'
+            const url = `${endpoint}/users`
             const response = await fetch(url);
             const users = await response.json();
 
             Object.keys(users).forEach(user_id => {
                 addUserToList(users[user_id], user_id)
             });
+
+            if(Object.keys(users).length === 0){
+                const table = document.getElementById('users');
+                table.innerHTML = `<tr><td colspan="5">کاربری یافت نشد !</td></tr>`
+            }
         }
 
         async function addUserToList(user, user_id){
@@ -49,7 +59,7 @@
         }
 
         async function removeUser(user_id){
-            const url = `http://127.0.0.1:8000/users/${user_id}`
+            const url = `${endpoint}/users/${user_id}`
             const response = await fetch(url, {
                 method: "DELETE",
             });

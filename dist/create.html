@@ -7,10 +7,9 @@
 </head>
 <body>
     <nav>
-        <div>سامانه مدیریت مشتریان مرادپور</div>
+        <div>سامانه مدیریت مشتریان تست نژاد</div>
         <div>
-            <a href="list.html">لیست کاربران</a> | 
-            <a href="create.html">ایجاد کاربر</a>    
+            <a href="index.html">لیست کاربران</a>
         </div>
     </nav>
     <section class="page">
@@ -42,10 +41,11 @@
             });
 
             if(response.status === 200){
-                document.getElementById('result').innerHTML = '<span class="success">کاربر با موفقیت افزوده شد.</span>'
+                document.getElementById('result').innerHTML = '<span class="success">کاربر با موفقیت افزوده شد.</span>';
+                window.location = "index.html";
             }
             else{
-                document.getElementById('result').innerHTML = '<span class="error">خطا در ویرایش کاربر.</span>'
+                document.getElementById('result').innerHTML = '<span class="error">خطا در ویرایش کاربر.</span>';
             }
         }
     </script>

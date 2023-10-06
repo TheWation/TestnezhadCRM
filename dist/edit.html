@@ -7,10 +7,9 @@
 </head>
 <body>
     <nav>
-        <div>سامانه مدیریت مشتریان مرادپور</div>
+        <div>سامانه مدیریت مشتریان تست نژاد</div>
         <div>
-            <a href="list.html">لیست کاربران</a> | 
-            <a href="create.html">ایجاد کاربر</a>    
+            <a href="index.html">لیست کاربران</a>
         </div>
     </nav>
     <section class="page">
@@ -56,7 +55,7 @@
 
             if(response.status === 200){
                 document.getElementById('result').innerHTML = '<span class="success">کاربر با موفقیت ویرایش شد.</span>'
-                window.location = "list.html"
+                window.location = "index.html"
             }
             else{
                 document.getElementById('result').innerHTML = '<span class="error">خطا در ایجاد کاربر.</span>'
