@@ -17,11 +17,11 @@ To run the project, you have two options:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/TheWation/MoradpoorCRM
+git clone https://github.com/TheWation/TestnezhadCRM
 ```
 
 ```bash
-cd MoradpoorCRM/dist
+cd TestnezhadCRM/dist
 ```
 
 Open any of the HTML files (create.html, edit.html, index.html) in your preferred web browser.
@@ -33,14 +33,14 @@ Open any of the HTML files (create.html, edit.html, index.html) in your preferre
 2. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/TheWation/MoradpoorCRM
+git clone https://github.com/TheWation/TestnezhadCRM
 ```
 
 
 3. Navigate to the project directory:
 
 ```bash
-cd MoradpoorCRM/dist
+cd TestnezhadCRM/dist
 ```
 
 4. Start a simple HTTP server using Python's http.server module:
